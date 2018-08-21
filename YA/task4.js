@@ -8,7 +8,6 @@ function getAnagrams() {
   const anagrams = [];
   for (let i = 0; i < arguments.length; i++) {
     const sortedArgument = sortAlphabetically(arguments[i]);
-    
     const curAnagrams = [];
     let idx = sortedArguments.indexOf(sortedArgument, i);
     while (idx != -1) {
