@@ -4,17 +4,16 @@ function getAnagrams() {
     return str.split('').sort().join('');
   }
 
-  const args = Array.prototype.slice.call(arguments);
-  const sortedArguments = args.map( el => sortAlphabetically(el) );
+  const sortedArguments = Array.prototype.slice.call(arguments).map( el => sortAlphabetically(el) );
 
   const anagrams = [];
-  for (let i = 0; i < args.length; i++) {
-    const sortedArgument = sortAlphabetically(args[i]);
+  for (let i = 0; i < arguments.length; i++) {
+    const sortedArgument = sortAlphabetically(arguments[i]);
     
     const curAnagrams = [];
     let idx = sortedArguments.indexOf(sortedArgument, i);
     while (idx != -1) {
-      curAnagrams.push(args[idx]);
+      curAnagrams.push(arguments[idx]);
       delete sortedArguments[idx];
       idx = sortedArguments.indexOf(sortedArgument, idx + 1);
     }
