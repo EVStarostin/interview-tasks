@@ -5,7 +5,6 @@ function getAnagrams() {
   }
 
   const sortedArguments = Array.prototype.slice.call(arguments).map( el => sortAlphabetically(el) );
-
   const anagrams = [];
   for (let i = 0; i < arguments.length; i++) {
     const sortedArgument = sortAlphabetically(arguments[i]);
