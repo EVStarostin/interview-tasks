@@ -45,9 +45,9 @@ function sum(list) {
     let result = list.value;
   
     return function recurseSum(tmp) {
-        if (list.next) {
-            result = result + list.value;
-            sum(list.next); // (2)
+        result = result + tmp.value;
+        if (tmp.next) {
+            sum(tmp.next); // (2)
         }
     }
 }
