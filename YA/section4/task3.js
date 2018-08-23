@@ -47,7 +47,7 @@ function sum(list) {
     if (list.next) {
         sum(list.next); // (2)
     }
-  }
+}
 
 const x = sum(list);
 console.log(x);
