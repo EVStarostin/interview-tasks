@@ -44,8 +44,11 @@ const list = {
 function sum(list) {
     let result = list.value;
   
-    if (list.next) {
-        sum(list.next); // (2)
+    return function recurseSum(tmp) {
+        if (list.next) {
+            result = result + list.value;
+            sum(list.next); // (2)
+        }
     }
 }
 
