@@ -29,12 +29,17 @@ const list = {
                 },
                 {
                     value: 4,
-                    next: null
+                    next: [
+                        {
+                            value: 5,
+                            next: null
+                        }
+                    ]
                 }
             ]
         },
         {
-            value: 5,
+            value: 6,
             next: null
         }
     ]
@@ -43,13 +48,16 @@ const list = {
 
 function sum(list) {
     let result = list.value;
-  
-    return function recurseSum(tmp) {
-        result = result + tmp.value;
-        if (tmp.next) {
-            sum(tmp.next); // (2)
+    function sumRecursive(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            result = result + arr[i].value;
+            if (arr[i].next) {
+                sumRecursive(arr[i].next);
+            }
         }
     }
+    if (list.next) sumRecursive(list.next);
+    return result;
 }
 
 const x = sum(list);
