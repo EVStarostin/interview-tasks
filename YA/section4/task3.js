@@ -45,14 +45,13 @@ const list = {
     ]
 }
 
-
 function sum(list) {
     let result = list.value;
-    function sumRecursive(arr) {
-        for (let i = 0; i < arr.length; i++) {
-            result = result + arr[i].value;
-            if (arr[i].next) {
-                sumRecursive(arr[i].next);
+    function sumRecursive(next) {
+        for (let i = 0; i < next.length; i++) {
+            result = result + next[i].value;
+            if (next[i].next) {
+                sumRecursive(next[i].next);
             }
         }
     }
