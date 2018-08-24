@@ -36,5 +36,5 @@ var limits = {
     return obj;
 }
 
-  const x = getMoney(120, limits);
-  console.log(x);
+const x = getMoney(120, limits);
+console.log(x);
