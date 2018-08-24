@@ -4,5 +4,10 @@ function Person(name, age) {
   this.name = name;
   this.age = age;
 }
+
+function myNew(person, name, age) {
+
+}
+
 var person = myNew(person, "Vasia", 34);
-person instanceOf Person // true;
+console.log(person instanceof Person); // true;
