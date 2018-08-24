@@ -5,9 +5,11 @@ function Person(name, age) {
   this.age = age;
 }
 
-function myNew(person, name, age) {
-
+function myNew(Person, name, age) {
+    const person = {name, age};
+    person.__proto__ = Person.prototype;
+    return person;
 }
 
-var person = myNew(person, "Vasia", 34);
+var person = myNew(Person, "Vasia", 34);
 console.log(person instanceof Person); // true;
