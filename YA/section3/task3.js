@@ -13,6 +13,7 @@ var limits = {
     let initial = 0;
 
     while (initial < moneyTypes.length && rest > 0) {
+
         try {
             let i = initial;
             while (rest > 0) {
@@ -32,7 +33,9 @@ var limits = {
             if (moneyTypes[initial] === undefined) throw new Error('Нужную сумму выдать невозможно');
             rest = amount;
         }
+        
     }
+
     return obj;
 }
 
