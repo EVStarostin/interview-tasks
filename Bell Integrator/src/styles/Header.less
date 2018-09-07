@@ -1,0 +1,45 @@
+@import "./palette";
+.header-wrapper {
+	background: @background-color-header;
+	border-bottom: 1px solid @border-color-header;
+}
+
+.header-main {
+  position: relative;
+  &__logo h1 {
+    color: @font-color-header;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    padding-top: 10px;
+    a {
+      color: @font-color-header;
+    }
+  }
+  &__logo img {
+    width: 50px;
+    height: 50px;
+    float: left;
+  }
+  &__authorization {
+    width: 200px;
+    position: relative;
+    right: 0px;
+    top: 0px;
+    color: @font-color-header;
+    float: right;
+    text-align: right;
+    padding: 7px;
+    p {
+      margin: 0;
+      button {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .header-main__logo h1 {
+    font-size: 1em;
+  }
+}
